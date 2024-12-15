@@ -1,0 +1,305 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+header nav ul li a i {
+  margin-right: 8px;
+}
+
+header nav ul li a:hover {
+  color: #388E3C;
+}
+
+header nav ul li a.active {
+  color: #388E3C;  /* Active link color */
+  font-weight: bold;
+  text-decoration: underline;  /* Optional underline for emphasis */
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0; /* Optional: Remove any extra padding */
+}
+
+
+.pd{
+  padding-left: 11%;
+} 
+
+.cd{
+  padding-left: 12%;
+}
+
+.main-content {
+  flex-grow: 1; /* Make the main content take up the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px; /* Optional: Add padding for spacing */
+  text-align: center; /* Center-align text */
+}
+
+.bg1 {
+  background: linear-gradient(to right, #9f86db, #92e196);
+}
+
+.landing {
+  background: linear-gradient(to right, #9f86db, #92e196);
+  color: white;
+  padding: 80px 20px;  /* Adjust padding for balance */
+  text-align: center;
+  min-height: 60vh;     /* Allow content to take most of the screen but leave room for footer */
+}
+
+.landing-content h1, .landing-content p, .landing-content a {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.landing-content h1 {
+  font-size: 3rem; /* Ensure large heading size */
+  margin-bottom: 20px;
+}
+
+.landing-content p {
+  font-size: 1.5rem; /* Increased paragraph text size */
+  margin-bottom: 20px;
+}
+
+.landing-content a {
+  background-color: #fff;
+  color: #333;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  transition: background-color 0.3s;
+}
+
+.landing-content a:hover {
+  background-color: #388E3C;
+}
+
+/* Resume and Biodata Pages */
+.resume{
+  padding: 30px 20px;
+  padding-bottom: 60px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.biodata {
+  padding: 4px 4px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 8px;  
+}
+
+.resume h1, .biodata h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 24px;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.section ul {
+  list-style-type: square;
+}
+
+/* Added ID-specific styles for biodata page */
+#personal-details, #contact-info, #address, #socials {
+  margin-bottom: 20px; /* Reduced margin for compactness */
+}
+
+#personal-details h2, #contact-info h2, #address h2, #socials h2 {
+  font-size: 20px; /* Smaller section titles for compactness */
+  color: #4CAF50;
+  margin-bottom: 8px;
+}
+
+#personal-details p, #contact-info p, #address p, #socials ul {
+  font-size: 1rem; /* Smaller font size for text */
+  margin: 5px 0; /* Reduced margin */
+}
+
+#social-links {
+  padding-left: 20px; /* Indent social media list */
+}
+
+#social-links li {
+  font-size: 1rem; /* Adjust font size for list items */
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+/* Aligning social media container similarly to personal details */
+.socials-container {
+  display: block; 
+  margin-left: 12%; 
+  margin-top: 10px; 
+}
+
+.socials-container a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2em;
+  margin-right: 10px; 
+}
+
+.socials-container a:hover {
+  color: #0073e6; /* Hover effect */
+}
+
+
+/* Added transition effect for better visuals */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.btn-fade-in {
+  padding: 10px 20px;
+  margin: 10px 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.headings-fade-in {
+  opacity: 0;
+  size: 32px;
+  animation: fadeIn 2s forwards;
+}
+
+/* Highlight active link */
+.nav-link.active {
+  color: #388E3C;  /* Active link color */
+  font-weight: bold;
+  text-decoration: underline;  /* Optional: add underline to indicate active page */
+}
+
+.nav-link:hover {
+  color: #388E3C;  /* Highlight color on hover */
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .landing-content h1 {
+      font-size: 2rem; /* Adjust heading size for small screens */
+  }
+
+  .landing-content p {
+      font-size: 1.25rem; /* Adjust paragraph size for small screens */
+  }
+
+  .landing-content a {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+}
+
+#pd {
+  display: flex;
+  justify-content: space-between; /* This ensures the two sections are on opposite sides */
+  align-items: center; /* Vertically center the content */
+  margin-bottom: 20px;
+}
+
+/* Container to store the personal details and image */
+.personal-details-container {
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center; /* Vertically center the content */
+  margin-bottom: 0; /* Remove margin if any */
+}
+
+
+.personal-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-left: 40px; /* Allow personal details to take up remaining space */
+}
+
+.personal-details h2 {
+  margin: 0;
+}
+
+.personal-details p {
+  line-height: 1.5; /* Adjust as needed for line spacing */
+  margin: 5px 0; /* Ensure no extra vertical spacing between paragraphs */
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+  align-items: center;
+  padding-right: 200px; /* Adds spacing between text and image */
+}
+
+.passport-image {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  object-fit: fill;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
